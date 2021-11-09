@@ -25,6 +25,7 @@ jobs:
 
       - name: Crowdin Prep
         shell: bash
+        env:
           CROWDIN_API_KEY: ${{ secrets.CROWDIN_API_KEY }}
         run: |
           python3 intl/crowdin_prep.py "libretro"
